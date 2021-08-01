@@ -1,4 +1,3 @@
-use std::cmp::min;
 use std::collections::HashMap;
 
 // given two strings, how many characters do we need to remove (from either) to make them anagrams?
