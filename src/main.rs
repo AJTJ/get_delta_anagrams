@@ -25,22 +25,22 @@ fn get_char_count(s: &str) -> HashMap<char, i32> {
 }
 
 fn get_delta_count(char_hash1: HashMap<char, i32>, char_hash2: HashMap<char, i32>) -> i32 {
-    let mut delta: i32 = 0;
+    let mut delta_count: i32 = 0;
 
     for (key, hash1_val) in &char_hash1 {
         if let Some(hash2_val) = char_hash2.get(&key) {
-            delta += hash1_val - hash2_val;
+            delta_count += hash1_val - hash2_val;
         } else {
-            delta += hash1_val;
+            delta_count += hash1_val;
         }
     }
 
     for (key, hash2_val) in char_hash2 {
         if let None = char_hash1.get(&key) {
-            delta += hash2_val
+            delta_count += hash2_val
         }
     }
-    delta
+    delta_count
 }
 
 fn main() {
