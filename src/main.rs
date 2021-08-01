@@ -44,7 +44,7 @@ fn get_delta_count(char_hash1: HashMap<char, i32>, char_hash2: HashMap<char, i32
 }
 
 fn main() {
-    let s1 = "abc";
+    let s1 = "abcccaaa";
     let s2 = "ajk";
 
     println!("{}", get_dif(s1, s2));
